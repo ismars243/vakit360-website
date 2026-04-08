@@ -86,8 +86,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-40 pb-20 px-6 min-h-[90vh] flex items-center">
-        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <section class="pt-40 pb-20 px-6 min-h-[90vh] flex items-center relative overflow-hidden">
+        <!-- Arkaplan Cami Görseli için Alan -->
+        <img src="images/cami-bg.jpg" class="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-screen pointer-events-none" onerror="this.style.display='none'">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
             
             <div class="space-y-8 text-center lg:text-left">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-emerald-400 mb-4 border border-emerald-500/20">
@@ -127,74 +129,41 @@
                 
                 <!-- Telefon Mokcup Temsili CSS cizimi - Abstract Premium Model -->
                 <div class="relative z-10 w-[280px] h-[580px] mt-12 md:mt-0">
-                    <!-- The Phone Body -->
-                    <div class="absolute inset-0 bg-zinc-950/80 backdrop-blur-3xl border border-white/10 rounded-[3rem] shadow-2xl overflow-hidden flex flex-col z-10 ring-1 ring-emerald-500/20">
+                    <!-- The Phone Body: Ekran daha beyaz/aydinlik istenmisti -->
+                    <div class="absolute inset-0 bg-white/10 backdrop-blur-3xl border-4 border-white/40 rounded-[3rem] shadow-[0_20px_50px_rgba(255,255,255,0.05)] overflow-hidden flex flex-col z-10 ring-1 ring-emerald-500/20">
                         <!-- Çentik -->
-                        <div class="absolute top-0 inset-x-0 h-6 bg-black rounded-b-3xl mx-16 z-30 shadow-[0_4px_15px_rgba(0,0,0,1)]"></div>
+                        <div class="absolute top-0 inset-x-0 h-[22px] bg-zinc-900 rounded-b-[20px] mx-[70px] z-30 border-b border-white/10"></div>
                         
-                        <!-- Premium Inner Gradient Animation -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/30 to-black z-0"></div>
-                        <div class="absolute top-[20%] left-[20%] w-32 h-32 bg-emerald-500/30 rounded-full blur-[60px] z-0 animate-pulse"></div>
+                        <!-- Premium Acik Renk Arkaplan -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-zinc-50 to-zinc-200 z-0"></div>
                         
-                        <!-- İçerik -->
-                        <div class="relative z-20 flex-1 flex flex-col items-center pt-24 px-6 pb-8">
-                            <!-- Abstract Geometric Islamic Star / Clock -->
-                            <div class="relative w-40 h-40 flex items-center justify-center mb-12">
-                                <div class="absolute inset-0 border-2 border-emerald-500/20 rounded-full rotate-45"></div>
-                                <div class="absolute inset-0 border-2 border-emerald-500/20 rounded-full rotate-[-45deg]"></div>
-                                <div class="absolute inset-2 border border-emerald-400/40 rounded-full"></div>
-                                <div class="absolute inset-0 bg-emerald-900/20 rounded-full blur-md"></div>
-                                
-                                <div class="text-center">
-                                    <div class="text-xs text-emerald-400 font-semibold tracking-[0.2em] uppercase mb-1 drop-shadow-md">İkindi</div>
-                                    <div class="text-3xl font-light text-white tracking-widest drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">16<span class="text-emerald-400">:</span>45</div>
-                                </div>
-                            </div>
-                            
-                            <!-- Minimal Data -->
-                            <div class="w-full space-y-4">
-                                <div class="h-14 w-full bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md flex items-center px-4 justify-between">
-                                    <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center">
-                                        <i class="fa-solid fa-moon text-zinc-400 text-xs"></i>
-                                    </div>
-                                    <div class="w-24 h-2 bg-white/10 rounded-full"></div>
-                                    <div class="w-8 h-2 bg-emerald-500/50 rounded-full"></div>
-                                </div>
-                                <div class="h-14 w-full bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md flex items-center px-4 justify-between">
-                                    <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center">
-                                        <i class="fa-solid fa-book-open text-zinc-400 text-xs"></i>
-                                    </div>
-                                    <div class="w-20 h-2 bg-white/10 rounded-full"></div>
-                                    <div class="w-12 h-2 bg-emerald-500/50 rounded-full"></div>
-                                </div>
-                            </div>
-                            
-                            <!-- Alt Dock -->
-                            <div class="mt-auto w-full h-12 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xl flex items-center justify-around px-2">
-                                <div class="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
-                                <div class="w-1.5 h-1.5 rounded-full bg-white/30"></div>
-                                <div class="w-1.5 h-1.5 rounded-full bg-white/30"></div>
-                                <div class="w-1.5 h-1.5 rounded-full bg-white/30"></div>
-                            </div>
+                        <!-- Kullanıcının Ekran Görüntüsü Buraya Gelecek -->
+                        <img src="images/ekran1.png" class="absolute inset-0 w-full h-full object-cover z-20" alt="Vakit360 Ekran Görüntüsü" onerror="this.style.display='none'" />
+                        
+                        <!-- Ekran görüntüsü atılana kadar görünecek geçici şık beyaz tasarım -->
+                        <div class="relative z-10 flex-1 flex flex-col items-center pt-24 px-6 pb-8 text-zinc-800">
+                            <div class="text-xs text-emerald-600 font-bold tracking-[0.2em] uppercase mb-1 drop-shadow-sm">Uygulama Görseli</div>
+                            <div class="text-sm font-medium text-zinc-500 mb-8 text-center px-2">Kendi ekran görüntünü "images/ekran1.png" adıyla kaydet.</div>
+                            <div class="w-16 h-16 rounded-full border border-zinc-300 flex items-center justify-center bg-white shadow-sm mb-6"><i class="fa-solid fa-image text-zinc-300 text-2xl"></i></div>
                         </div>
                     </div>
 
                     <!-- FLOATING CARDS (Yarı dışarı taşan zarif kutular) -->
                     <!-- Sol Üst: Hicri Tarih -->
-                    <div class="absolute -left-12 top-16 w-36 glass bg-zinc-900/80 p-3 rounded-2xl z-30 shadow-[0_15px_30px_rgba(0,0,0,0.5)] border-l border-t border-emerald-500/30 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                    <div class="absolute -left-12 top-16 w-36 glass bg-white/95 p-3 rounded-2xl z-30 shadow-[0_15px_30px_rgba(0,0,0,0.1)] border border-emerald-100 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
                         <div class="flex items-center gap-2 mb-1.5">
-                            <i class="fa-solid fa-calendar-days text-emerald-400 text-[10px]"></i>
-                            <span class="text-[9px] text-zinc-400 uppercase tracking-widest font-bold">Hicri</span>
+                            <i class="fa-solid fa-calendar-days text-emerald-500 text-[10px]"></i>
+                            <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-bold">Hicri</span>
                         </div>
-                        <div class="text-sm font-serif text-white">20 Şevval 1447</div>
+                        <div class="text-sm font-serif text-zinc-900 font-bold">20 Şevval 1447</div>
                     </div>
 
                     <!-- Sağ Alt: Geri Sayım -->
-                    <div class="absolute -right-16 bottom-24 w-44 glass bg-emerald-950/80 p-4 rounded-2xl z-30 shadow-[0_15px_30px_rgba(16,185,129,0.2)] border border-emerald-500/30 overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                        <div class="absolute -right-4 -bottom-4 text-6xl text-emerald-500/10"><i class="fa-solid fa-clock"></i></div>
+                    <div class="absolute -right-16 bottom-24 w-44 glass bg-emerald-50/95 p-4 rounded-2xl z-30 shadow-[0_15px_30px_rgba(16,185,129,0.15)] border border-emerald-200 overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                        <div class="absolute -right-4 -bottom-4 text-6xl text-emerald-500/5"><i class="fa-solid fa-clock"></i></div>
                         <div class="relative z-10">
-                            <span class="text-[9px] text-emerald-300 uppercase tracking-widest font-bold mb-1 block">İkindi'ye Kalan</span>
-                            <div class="text-2xl font-light text-white tracking-wider">01<span class="text-emerald-500">:</span>15<span class="text-emerald-500">:</span>32</div>
+                            <span class="text-[9px] text-emerald-600 uppercase tracking-widest font-bold mb-1 block">İkindi'ye Kalan</span>
+                            <div class="text-2xl font-light text-emerald-950 tracking-wider font-bold">01<span class="text-emerald-500">:</span>15<span class="text-emerald-500">:</span>32</div>
                         </div>
                     </div>
                 </div>
@@ -271,7 +240,10 @@
     </section>
 
     <!-- Günlük Ayet / Hadis Section -->
-    <section id="kuran" class="py-32 px-6 relative overflow-hidden">
+    <section id="kuran" class="py-32 px-6 relative overflow-hidden bg-zinc-950">
+        <!-- Arkaplan Kabe Görseli -->
+        <img src="images/kabe-bg.jpg" class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-luminosity pointer-events-none" onerror="this.style.display='none'">
+        
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] h-[600px] md:h-[800px] bg-emerald-500/10 rounded-full blur-[120px] z-0 pointer-events-none"></div>
         
         <div class="max-w-4xl mx-auto relative z-10 text-center glass p-8 md:p-16 rounded-[3rem] border border-emerald-500/20 shadow-2xl">
