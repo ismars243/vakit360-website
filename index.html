@@ -6,14 +6,16 @@
     <title>Vakit360 - İslami Yaşam Rehberi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['"Cormorant Garamond"', 'serif'],
                     },
                     colors: {
                         primary: '#10b981', // Emerald
@@ -102,7 +104,7 @@
                 
                 <h1 class="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
                     Huzura <br />
-                    <span class="font-serif italic font-normal text-zinc-300">giden yolda</span> <br />
+                    <span class="font-serif italic font-medium text-zinc-300 opacity-90">giden yolda</span> <br />
                     <span class="gradient-text">rehberiniz.</span>
                 </h1>
                 
@@ -248,11 +250,11 @@
             <!-- Sol: Ayet Metni -->
             <div class="text-center lg:text-left glass p-8 md:p-12 rounded-[3rem] border border-emerald-500/20 shadow-2xl">
                 <i class="fa-solid fa-quote-left text-4xl md:text-5xl text-emerald-500/30 mb-8 block"></i>
-                <h2 class="text-2xl md:text-3xl font-serif leading-relaxed mb-6 text-white">
+                <h2 class="text-2xl md:text-4xl font-serif leading-relaxed mb-6 text-emerald-50 opacity-90 drop-shadow-sm font-medium">
                     "Kur'an okunduğu zaman ona kulak verip dinleyin ve susun ki size merhamet edilsin."
                 </h2>
-                <p class="text-emerald-400 font-medium text-sm md:text-base tracking-widest uppercase mb-2">— A'râf Suresi, 204 —</p>
-                <p class="text-zinc-500 text-sm">Gelişmiş Kur'an-ı Kerim modülü ile surelere kolayca ulaşın.</p>
+                <p class="text-emerald-400 font-medium text-xs md:text-sm tracking-[0.2em] uppercase mb-4">— A'râf Suresi, 204 —</p>
+                <p class="text-zinc-500 text-sm md:text-base leading-relaxed max-w-sm mx-auto lg:mx-0">Gelişmiş Kur'an-ı Kerim modülü ile surelere kolayca ulaşın.</p>
             </div>
 
             <!-- Sağ: İkinci Ekran / Mockup -->
