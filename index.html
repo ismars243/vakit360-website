@@ -66,6 +66,18 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.4);
         }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero-animate {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
     </style>
 </head>
 <body class="antialiased selection:bg-primary selection:text-white">
@@ -94,7 +106,7 @@
         <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
             
             <div class="space-y-8 text-center lg:text-left">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-emerald-400 mb-4 border border-emerald-500/20">
+                <div class="hero-animate inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-emerald-400 mb-4 border border-emerald-500/20">
                     <span class="relative flex h-2 w-2">
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                       <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -102,17 +114,17 @@
                     Yeni Sürüm Yayında
                 </div>
                 
-                <h1 class="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
+                <h1 class="hero-animate delay-100 text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
                     Huzura <br />
                     <span class="font-serif italic font-medium text-zinc-300 opacity-90">giden yolda</span> <br />
                     <span class="gradient-text">rehberiniz.</span>
                 </h1>
                 
-                <p class="text-lg md:text-xl text-zinc-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                <p class="hero-animate delay-200 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
                     Namaz vakitleri, dijital Mushaf, şık imsakiye ve gelişmiş kıble pusulası ile maneviyatınızı tek bir uygulamada toplayın.
                 </p>
 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                <div class="hero-animate delay-300 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
                     <a href="#indir" class="btn-hover flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-2xl font-bold text-lg">
                         <i class="fa-brands fa-apple text-2xl"></i>
                         App Store
@@ -125,7 +137,7 @@
             </div>
 
             <!-- Hero Mockup/Image Slot -->
-            <div class="relative w-full aspect-[4/5] lg:aspect-square flex justify-center items-center mt-10 lg:mt-0">
+            <div class="hero-animate delay-200 relative w-full aspect-[4/5] lg:aspect-square flex justify-center items-center mt-10 lg:mt-0">
                 <!-- Arkaplan Parlamasi -->
                 <div class="absolute inset-0 bg-emerald-500/20 blur-[100px] rounded-full"></div>
                 
@@ -177,7 +189,7 @@
     <!-- Özellikler Section -->
     <section id="ozellikler" class="py-24 px-6 bg-zinc-950 relative border-t border-white/5">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-20">
+            <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-[800ms] ease-out text-center mb-20">
                 <span class="text-emerald-500 font-semibold tracking-wider uppercase text-sm">GELİŞMİŞ ÖZELLİKLER</span>
                 <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-6 font-serif">Tam Donanımlı Deneyim</h2>
                 <p class="text-zinc-400 max-w-2xl mx-auto text-lg">Vakit360, günlük ibadetlerinizi takip edebilmeniz için ihtiyacınız olan her şeyi modern bir arayüzle sunar.</p>
@@ -185,7 +197,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Özellik 1 -->
-                <div class="feature-card glass p-8 rounded-3xl">
+                <div class="animate-on-scroll delay-100 opacity-0 translate-y-12 transition-all duration-[800ms] ease-out feature-card glass p-8 rounded-3xl">
                     <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 text-2xl mb-6">
                         <i class="fa-solid fa-clock"></i>
                     </div>
@@ -194,7 +206,7 @@
                 </div>
 
                 <!-- Özellik 2 -->
-                <div class="feature-card glass p-8 rounded-3xl">
+                <div class="animate-on-scroll delay-200 opacity-0 translate-y-12 transition-all duration-[800ms] ease-out feature-card glass p-8 rounded-3xl">
                     <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-500 text-2xl mb-6">
                         <i class="fa-solid fa-book-open"></i>
                     </div>
@@ -306,7 +318,7 @@
 
     <!-- İletişim / Kurumsal Section -->
     <section id="iletisim" class="py-24 px-6 relative z-10 bg-zinc-950 border-t border-white/5">
-        <div class="max-w-4xl mx-auto glass p-8 md:p-12 rounded-[3rem] border border-white/5 shadow-2xl relative overflow-hidden">
+        <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-[1000ms] ease-out max-w-4xl mx-auto glass p-8 md:p-12 rounded-[3rem] border border-white/5 shadow-2xl relative overflow-hidden">
             <div class="absolute -right-20 -top-20 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px]"></div>
             
             <div class="text-center mb-10 relative z-10">
@@ -357,5 +369,23 @@
         </div>
     </footer>
 
+    <!-- Animasyon Scripti -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-12');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            animateElements.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
