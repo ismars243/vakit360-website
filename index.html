@@ -88,7 +88,7 @@
     <!-- Hero Section -->
     <section class="pt-40 pb-20 px-6 min-h-[90vh] flex items-center relative overflow-hidden">
         <!-- Arkaplan Cami Görseli için Alan -->
-        <img src="images/cami-bg.jpg" class="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-screen pointer-events-none" onerror="this.style.display='none'">
+        <img src="images/cami-bg.png" class="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-screen pointer-events-none" onerror="this.style.display='none'">
         <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
             
             <div class="space-y-8 text-center lg:text-left">
@@ -241,17 +241,38 @@
 
     <!-- Günlük Ayet / Hadis Section -->
     <section id="kuran" class="py-32 px-6 relative overflow-hidden bg-zinc-950">
-        <!-- Arkaplan Kabe Görseli -->
-        <img src="images/kabe-bg.jpg" class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-luminosity pointer-events-none" onerror="this.style.display='none'">
         
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] h-[600px] md:h-[800px] bg-emerald-500/10 rounded-full blur-[120px] z-0 pointer-events-none"></div>
         
-        <div class="max-w-4xl mx-auto relative z-10 text-center glass p-8 md:p-16 rounded-[3rem] border border-emerald-500/20 shadow-2xl">
-            <i class="fa-solid fa-quote-left text-4xl md:text-6xl text-emerald-500/30 mb-8 block"></i>
-            <h2 class="text-2xl md:text-4xl font-serif leading-relaxed mb-8 text-white">
-                "Şüphesiz namaz, mü'minlere belirli vakitlerde farz kılınmıştır."
-            </h2>
-            <p class="text-emerald-400 font-medium text-sm md:text-lg tracking-widest uppercase">— Nisa Suresi, 103 —</p>
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            <!-- Sol: Ayet Metni -->
+            <div class="text-center lg:text-left glass p-8 md:p-12 rounded-[3rem] border border-emerald-500/20 shadow-2xl">
+                <i class="fa-solid fa-quote-left text-4xl md:text-5xl text-emerald-500/30 mb-8 block"></i>
+                <h2 class="text-2xl md:text-3xl font-serif leading-relaxed mb-6 text-white">
+                    "Kur'an okunduğu zaman ona kulak verip dinleyin ve susun ki size merhamet edilsin."
+                </h2>
+                <p class="text-emerald-400 font-medium text-sm md:text-base tracking-widest uppercase mb-2">— A'râf Suresi, 204 —</p>
+                <p class="text-zinc-500 text-sm">Gelişmiş Kur'an-ı Kerim modülü ile surelere kolayca ulaşın.</p>
+            </div>
+
+            <!-- Sağ: İkinci Ekran / Mockup -->
+            <div class="relative w-full flex justify-center">
+                <!-- Arka plan parlama -->
+                <div class="absolute inset-0 bg-emerald-500/20 blur-[80px] rounded-full"></div>
+                
+                <!-- 2. Telefon Çerçevesi -->
+                <div class="relative z-10 w-[240px] md:w-[260px] h-[520px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col ring-1 ring-emerald-500/20 rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <div class="absolute top-0 inset-x-0 h-[20px] bg-zinc-900 rounded-b-[16px] mx-[60px] z-30 border-b border-white/10"></div>
+                    
+                    <img src="images/ekran2.png" class="absolute inset-0 w-full h-full object-cover z-20" alt="Vakit360 Kur'an Ekranı" onerror="this.style.display='none'" />
+                    
+                    <!-- Placeholder (Ekran2 bulunmazsa) -->
+                    <div class="relative z-10 flex-1 flex flex-col items-center justify-center pt-20 px-6 pb-8 text-zinc-400 bg-zinc-900">
+                        <i class="fa-solid fa-book-quran text-4xl mb-4 text-emerald-500/50"></i>
+                        <div class="text-xs text-center">Kur'an ekranı görseli (ekran2.png) bekleniyor...</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
