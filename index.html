@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vakit360 - İslami Yaşam Rehberi</title>
-    <meta name="description" content="Vakit360 ile namaz vakitleri, dijital Mushaf, kıble pusulası ve imsakiyeyi tek uygulamada keşfedin. Türkiye'nin en kapsamlı İslami yaşam rehberi.">
-    <meta name="keywords" content="namaz vakitleri, kıble, ezan, imsakiye, kuran, dua, vakit360">
+    <meta name="description" content="Vakit360 ile namaz vakitleri, Kur'an dinleme, kıble pusulası, zekat hesaplama, dua ve daha fazlasını tek uygulamada keşfedin. 20+ özellik ile İslami yaşamın tam rehberi.">
+    <meta name="keywords" content="namaz vakitleri, kıble, ezan, imsakiye, kuran, dua, zekat, zikir, cevşen, vakit360">
     <meta name="author" content="Vakit360">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vakit360.com/">
     <meta property="og:title" content="Vakit360 - İslami Yaşam Rehberi">
-    <meta property="og:description" content="Namaz vakitleri, dijital Mushaf, kıble pusulası ve imsakiyeyi tek uygulamada keşfedin.">
+    <meta property="og:description" content="20+ özellik ile namaz vakitleri, Kur'an, kıble, zekat hesaplama ve daha fazlası tek uygulamada.">
     <meta property="og:image" content="https://vakit360.com/images/logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vakit360 - İslami Yaşam Rehberi">
-    <meta name="twitter:description" content="Namaz vakitleri, dijital Mushaf, kıble pusulası ve imsakiyeyi tek uygulamada keşfedin.">
+    <meta name="twitter:description" content="20+ özellik ile İslami yaşamın tam rehberi.">
     <link rel="icon" type="image/png" href="images/logo.png?v=2">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -29,11 +29,7 @@
                         sans: ['Inter', 'sans-serif'],
                         serif: ['"Cormorant Garamond"', 'serif'],
                     },
-                    colors: {
-                        primary: '#10b981',
-                        dark: '#09090b',
-                        card: '#18181b',
-                    }
+                    colors: { primary: '#10b981', dark: '#09090b', card: '#18181b' }
                 }
             }
         }
@@ -47,41 +43,27 @@
                 radial-gradient(at 100% 100%, hsla(158,100%,35%,0.1) 0px, transparent 50%);
             background-attachment: fixed;
         }
-        .glass {
-            background: rgba(24, 24, 27, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .feature-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-        .feature-card:hover {
-            transform: translateY(-8px);
-            background: rgba(24, 24, 27, 0.9);
-            border-color: rgba(16, 185, 129, 0.3);
-            box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.15);
-        }
-        .gradient-text {
-            background: linear-gradient(to right, #34d399, #10b981);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        .glass { background: rgba(24,24,27,0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.05); }
+        .feature-card { transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+        .feature-card:hover { transform: translateY(-6px); background: rgba(24,24,27,0.9); box-shadow: 0 10px 40px -10px rgba(16,185,129,0.15); }
+        .gradient-text { background: linear-gradient(to right, #34d399, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .btn-hover { transition: all 0.3s ease; }
-        .btn-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.4);
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .hero-animate { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-        .delay-400 { animation-delay: 400ms; }
+        .btn-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(16,185,129,0.4); }
+        @keyframes fadeInUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+        .hero-animate { animation: fadeInUp 0.8s cubic-bezier(0.16,1,0.3,1) forwards; opacity:0; }
+        .delay-100 { animation-delay:100ms; }
+        .delay-200 { animation-delay:200ms; }
+        .delay-300 { animation-delay:300ms; }
+        .delay-400 { animation-delay:400ms; }
         .review-card { transition: all 0.3s ease; }
-        .review-card:hover { transform: translateY(-4px); border-color: rgba(16, 185, 129, 0.2); }
-        #scroll-top { opacity: 0; pointer-events: none; transition: all 0.3s ease; }
-        #scroll-top.visible { opacity: 1; pointer-events: auto; }
+        .review-card:hover { transform: translateY(-4px); border-color: rgba(16,185,129,0.2); }
+        #scroll-top { opacity:0; pointer-events:none; transition: all 0.3s ease; }
+        #scroll-top.visible { opacity:1; pointer-events:auto; }
+        .category-badge { display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border-radius:999px; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:20px; }
+        .tier-card { transition: all 0.3s ease; }
+        .tier-card:hover { transform: translateY(-4px); }
+        .tier-popular { position: relative; }
+        .tier-popular::before { content:'En Popüler'; position:absolute; top:-14px; left:50%; transform:translateX(-50%); background: #10b981; color:#09090b; font-size:10px; font-weight:700; padding:3px 12px; border-radius:999px; white-space:nowrap; }
     </style>
 </head>
 <body class="antialiased selection:bg-primary selection:text-white">
@@ -97,31 +79,29 @@
             </div>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
                 <a href="#ozellikler" class="hover:text-white transition-colors">Özellikler</a>
+                <a href="#paketler" class="hover:text-white transition-colors">Paketler</a>
                 <a href="#yorumlar" class="hover:text-white transition-colors">Yorumlar</a>
-                <a href="#kuran" class="hover:text-white transition-colors">Kur'an-ı Kerim</a>
                 <a href="#sss" class="hover:text-white transition-colors">SSS</a>
                 <a href="#iletisim" class="hover:text-white transition-colors">İletişim</a>
-                <a href="#bagis" class="bg-emerald-500 text-zinc-950 border border-emerald-500 px-5 py-2 rounded-full hover:bg-emerald-400 transition-all duration-300 flex items-center gap-2 font-bold shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-                    <i class="fa-solid fa-heart"></i> Destek Ol
+                <a href="#indir" class="bg-emerald-500 text-zinc-950 border border-emerald-500 px-5 py-2 rounded-full hover:bg-emerald-400 transition-all duration-300 flex items-center gap-2 font-bold shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+                    <i class="fa-solid fa-download"></i> İndir
                 </a>
             </div>
-            <!-- Hamburger -->
             <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-white/5 transition-colors" aria-label="Menü">
                 <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="bar1"></span>
                 <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="bar2"></span>
                 <span class="block w-4 h-0.5 bg-white transition-all duration-300 ml-auto" id="bar3"></span>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
             <div class="max-w-6xl mx-auto px-6 pb-6 pt-4 flex flex-col gap-4 border-t border-white/5 mt-4">
                 <a href="#ozellikler" class="text-zinc-300 hover:text-white py-2 text-sm font-medium" onclick="closeMobileMenu()">Özellikler</a>
+                <a href="#paketler" class="text-zinc-300 hover:text-white py-2 text-sm font-medium" onclick="closeMobileMenu()">Paketler</a>
                 <a href="#yorumlar" class="text-zinc-300 hover:text-white py-2 text-sm font-medium" onclick="closeMobileMenu()">Yorumlar</a>
-                <a href="#kuran" class="text-zinc-300 hover:text-white py-2 text-sm font-medium" onclick="closeMobileMenu()">Kur'an-ı Kerim</a>
                 <a href="#sss" class="text-zinc-300 hover:text-white py-2 text-sm font-medium" onclick="closeMobileMenu()">SSS</a>
                 <a href="#iletisim" class="text-zinc-300 hover:text-white py-2 text-sm font-medium" onclick="closeMobileMenu()">İletişim</a>
-                <a href="#bagis" onclick="closeMobileMenu()" class="bg-emerald-500 text-zinc-950 px-5 py-3 rounded-xl font-bold flex items-center gap-2 justify-center">
-                    <i class="fa-solid fa-heart"></i> Destek Ol
+                <a href="#indir" onclick="closeMobileMenu()" class="bg-emerald-500 text-zinc-950 px-5 py-3 rounded-xl font-bold flex items-center gap-2 justify-center">
+                    <i class="fa-solid fa-download"></i> Ücretsiz İndir
                 </a>
             </div>
         </div>
@@ -132,26 +112,22 @@
         <img src="images/cami-bg.png" class="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-screen pointer-events-none" onerror="this.style.display='none'">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-emerald-500/5 blur-[120px] pointer-events-none"></div>
         <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
-
             <div class="space-y-8 text-center lg:text-left">
-                <div class="hero-animate inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-emerald-400 mb-4 border border-emerald-500/20">
+                <div class="hero-animate inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-emerald-400 border border-emerald-500/20">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                     </span>
                     v1.1.7 &middot; Yeni Sürüm Yayında
                 </div>
-
                 <h1 class="hero-animate delay-100 text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
                     Huzura <br>
                     <span class="font-serif italic font-medium text-zinc-300 opacity-90">giden yolda</span> <br>
                     <span class="gradient-text">rehberiniz.</span>
                 </h1>
-
                 <p class="hero-animate delay-200 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                    Namaz vakitleri, dijital Mushaf, şık imsakiye ve gelişmiş kıble pusulası ile maneviyatınızı tek bir uygulamada toplayın.
+                    Namaz vakitleri, Kur'an okuma ve dinleme, kıble pusulası, zekat hesaplama, dua ve zikirler — İslami yaşamın ihtiyaç duyduğunuz her şeyi tek uygulamada.
                 </p>
-
                 <div class="hero-animate delay-300 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
                     <a href="#indir" class="btn-hover flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-2xl font-bold text-lg">
                         <i class="fa-brands fa-apple text-2xl"></i> App Store
@@ -160,8 +136,6 @@
                         <i class="fa-brands fa-google-play text-2xl text-emerald-500"></i> Google Play
                     </a>
                 </div>
-
-                <!-- Mini Stats -->
                 <div class="hero-animate delay-400 flex flex-wrap items-center gap-4 justify-center lg:justify-start pt-2">
                     <div class="flex items-center gap-1.5">
                         <div class="flex text-amber-400 text-xs gap-0.5">
@@ -172,27 +146,24 @@
                     <span class="w-px h-4 bg-white/10"></span>
                     <span class="text-sm text-zinc-400"><span class="text-white font-semibold">10.000+</span> kullanıcı</span>
                     <span class="w-px h-4 bg-white/10"></span>
-                    <span class="text-sm text-zinc-400"><span class="text-white font-semibold">7</span> dil desteği</span>
+                    <span class="text-sm text-zinc-400"><span class="text-white font-semibold">20+</span> özellik</span>
                     <span class="w-px h-4 bg-white/10"></span>
-                    <span class="text-sm font-semibold text-emerald-400">Ücretsiz</span>
+                    <span class="text-sm text-zinc-400"><span class="text-white font-semibold">7</span> dil</span>
                 </div>
             </div>
-
-            <!-- Phone Mockup -->
             <div class="hero-animate delay-200 relative w-full aspect-[4/5] lg:aspect-square flex justify-center items-center mt-10 lg:mt-0">
                 <div class="absolute inset-0 bg-emerald-500/20 blur-[100px] rounded-full"></div>
                 <div class="relative z-10 w-[280px] h-[580px] mt-12 md:mt-0">
-                    <div class="absolute inset-0 bg-white/10 backdrop-blur-3xl border-4 border-white/40 rounded-[3rem] shadow-[0_20px_50px_rgba(255,255,255,0.05)] overflow-hidden flex flex-col z-10 ring-1 ring-emerald-500/20">
+                    <div class="absolute inset-0 bg-white/10 backdrop-blur-3xl border-4 border-white/40 rounded-[3rem] shadow-[0_20px_50px_rgba(255,255,255,0.05)] overflow-hidden z-10 ring-1 ring-emerald-500/20">
                         <div class="absolute top-0 inset-x-0 h-[22px] bg-zinc-900 rounded-b-[20px] mx-[70px] z-30 border-b border-white/10"></div>
                         <div class="absolute inset-0 bg-gradient-to-br from-zinc-50 to-zinc-200 z-0"></div>
-                        <img src="images/ekran1.png" class="absolute inset-0 w-full h-full object-cover z-20" alt="Vakit360 Ekran Görüntüsü" onerror="this.style.display='none'">
-                        <div class="relative z-10 flex-1 flex flex-col items-center pt-24 px-6 pb-8 text-zinc-800">
+                        <img src="images/ekran1.png" class="absolute inset-0 w-full h-full object-cover z-20" alt="Vakit360 Ekran" onerror="this.style.display='none'">
+                        <div class="relative z-10 flex flex-col items-center pt-24 px-6 pb-8 text-zinc-800 h-full">
                             <div class="text-xs text-emerald-600 font-bold tracking-[0.2em] uppercase mb-1">Uygulama Görseli</div>
-                            <div class="text-sm font-medium text-zinc-500 mb-8 text-center px-2">images/ekran1.png adıyla kaydedin.</div>
+                            <div class="text-sm font-medium text-zinc-500 mb-8 text-center px-2">images/ekran1.png olarak kaydedin.</div>
                             <div class="w-16 h-16 rounded-full border border-zinc-300 flex items-center justify-center bg-white shadow-sm"><i class="fa-solid fa-image text-zinc-300 text-2xl"></i></div>
                         </div>
                     </div>
-                    <!-- Floating: Hicri -->
                     <div class="absolute -left-12 top-16 w-36 bg-white/95 p-3 rounded-2xl z-30 shadow-xl border border-emerald-100 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
                         <div class="flex items-center gap-2 mb-1.5">
                             <i class="fa-solid fa-calendar-days text-emerald-500 text-[10px]"></i>
@@ -200,7 +171,6 @@
                         </div>
                         <div class="text-sm font-serif text-zinc-900 font-bold">20 Şevval 1447</div>
                     </div>
-                    <!-- Floating: Geri Sayım -->
                     <div class="absolute -right-16 bottom-24 w-44 bg-emerald-50/95 p-4 rounded-2xl z-30 shadow-xl border border-emerald-200 overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-300">
                         <div class="absolute -right-4 -bottom-4 text-6xl text-emerald-500/5"><i class="fa-solid fa-clock"></i></div>
                         <div class="relative z-10">
@@ -231,62 +201,250 @@
                 <div class="text-zinc-500 text-sm">Ortalama Puan</div>
             </div>
             <div class="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 text-center">
-                <div class="text-3xl md:text-4xl font-bold text-white mb-1">7</div>
-                <div class="text-zinc-500 text-sm">Dil Desteği</div>
+                <div class="text-3xl md:text-4xl font-bold text-white mb-1">20+</div>
+                <div class="text-zinc-500 text-sm">Özellik</div>
             </div>
             <div class="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 text-center">
                 <div class="text-3xl md:text-4xl font-bold text-emerald-400 mb-1">Ücretsiz</div>
-                <div class="text-zinc-500 text-sm">İndir &amp; Kullan</div>
+                <div class="text-zinc-500 text-sm">Başlangıç Paketi</div>
             </div>
         </div>
     </section>
 
     <!-- Özellikler -->
-    <section id="ozellikler" class="py-24 px-6 bg-zinc-950 relative border-t border-white/5">
+    <section id="ozellikler" class="py-24 px-6 bg-zinc-950 border-t border-white/5">
         <div class="max-w-6xl mx-auto">
             <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-[800ms] ease-out text-center mb-20">
-                <span class="text-emerald-500 font-semibold tracking-wider uppercase text-sm">GELİŞMİŞ ÖZELLİKLER</span>
-                <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-6 font-serif">Tam Donanımlı Deneyim</h2>
-                <p class="text-zinc-400 max-w-2xl mx-auto text-lg">Vakit360, günlük ibadetlerinizi takip edebilmeniz için ihtiyacınız olan her şeyi modern bir arayüzle sunar.</p>
+                <span class="text-emerald-500 font-semibold tracking-wider uppercase text-sm">20+ ÖZELLİK</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-6 font-serif">Her İhtiyacınız İçin</h2>
+                <p class="text-zinc-400 max-w-2xl mx-auto text-lg">Namaz, Kur'an, dua, zekat, kıble ve daha fazlası — günlük ibadet hayatınızın ihtiyaç duyduğu her şey tek çatı altında.</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-[800ms] ease-out feature-card glass p-8 rounded-3xl">
-                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 text-2xl mb-6"><i class="fa-solid fa-clock"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Hassas Namaz Vakitleri</h3>
-                    <p class="text-zinc-400 leading-relaxed">Bulunduğunuz konuma göre Diyanet uyumlu, saniyesi saniyesine doğru vakitleri takip edin.</p>
-                </div>
-                <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-[800ms] ease-out feature-card glass p-8 rounded-3xl">
-                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-500 text-2xl mb-6"><i class="fa-solid fa-book-open"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Gerçek Mushaf Deneyimi</h3>
-                    <p class="text-zinc-400 leading-relaxed">Yüksek çözünürlüklü aslına sadık sayfalarla Kur'an-ı Kerim okumanın huzurunu telefonunuzda yaşayın.</p>
-                </div>
-                <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-[800ms] ease-out feature-card glass p-8 rounded-3xl">
-                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-500 text-2xl mb-6"><i class="fa-solid fa-compass"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Gelişmiş Kıble Pusulası</h3>
-                    <p class="text-zinc-400 leading-relaxed">İnternet bağlantısı olmadan bile Kabe'nin yönünü cihazınızın sensörleriyle en doğru şekilde bulun.</p>
-                </div>
-                <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-[800ms] ease-out feature-card glass p-8 rounded-3xl">
-                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-500 text-2xl mb-6"><i class="fa-solid fa-bell"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Akıllı Hatırlatıcılar</h3>
-                    <p class="text-zinc-400 leading-relaxed">Vakit öncesi bildirimler ve Ezan okuma özellikleriyle hiçbir namazı kaçırmayın.</p>
-                </div>
-                <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-[800ms] ease-out feature-card glass p-8 rounded-3xl">
-                    <div class="w-14 h-14 rounded-2xl bg-rose-500/10 flex items-center justify-center text-rose-500 text-2xl mb-6"><i class="fa-solid fa-calendar-days"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Dini Günler ve İmsakiye</h3>
-                    <p class="text-zinc-400 leading-relaxed">Özel günleri önceden görün, Ramazan ayında aylık imsakiye ile tüm ayın planını yapın.</p>
-                </div>
-                <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-[800ms] ease-out feature-card glass p-8 rounded-3xl">
-                    <div class="w-14 h-14 rounded-2xl bg-teal-500/10 flex items-center justify-center text-teal-500 text-2xl mb-6"><i class="fa-solid fa-moon"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Göz Yormayan Tema</h3>
-                    <p class="text-zinc-400 leading-relaxed">7'den fazla özel tema ile gece gündüz her ortamda rahat ve şık bir arayüz.</p>
-                </div>
-                <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-[800ms] ease-out feature-card glass p-8 rounded-3xl md:col-span-2 lg:col-span-1">
-                    <div class="w-14 h-14 rounded-2xl bg-yellow-500/10 flex items-center justify-center text-yellow-400 text-2xl mb-6"><i class="fa-solid fa-dharmachakra"></i></div>
-                    <div class="flex items-center gap-2 mb-3">
-                        <h3 class="text-xl font-bold">Manevi Çark</h3>
-                        <span class="text-[10px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Özel</span>
+
+            <!-- Namaz & İbadet -->
+            <div class="mb-16">
+                <div class="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 flex items-center gap-3 mb-8">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center">
+                        <i class="fa-solid fa-mosque text-emerald-400 text-sm"></i>
                     </div>
-                    <p class="text-zinc-400 leading-relaxed">Her gün taze ayet, hadis, dua ve Risale-i Nur'dan seçilmiş içeriklerle maneviyatınızı besleyin.</p>
+                    <h3 class="text-lg font-bold text-emerald-400 uppercase tracking-wider text-sm">Namaz &amp; İbadet</h3>
+                    <div class="flex-1 h-px bg-emerald-500/10"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 text-xl mb-5"><i class="fa-solid fa-clock"></i></div>
+                        <h4 class="text-base font-bold mb-2">Hassas Namaz Vakitleri</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Diyanet uyumlu, konumunuza göre saniye hassasiyetinde vakitler. Geri sayım saatiyle bir sonraki namazı takip edin.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 text-xl mb-5"><i class="fa-solid fa-book-open-reader"></i></div>
+                        <h4 class="text-base font-bold mb-2">Namaz Rehberi</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">8 namaz pozisyonunu görsel ve detaylı açıklamalarla öğrenin. Sabah'tan Yatsı'ya tüm namazların kılınış adımları.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 text-xl mb-5"><i class="fa-solid fa-compass"></i></div>
+                        <h4 class="text-base font-bold mb-2">Kıble Pusulası</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">GPS ve manyetik sensörle Kabe yönünü bulun. İnternet bağlantısı gerekmez, kalibrasyon rehberiyle hassas sonuç.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center text-rose-500 text-xl mb-5"><i class="fa-solid fa-calendar-days"></i></div>
+                        <h4 class="text-base font-bold mb-2">Aylık İmsakiye</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Ramazan'da ve her ay boyunca aylık imsakiye takvimi. Paylaşılabilir görünüm, lokasyon tabanlı dinamik güncelleme.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-500 text-xl mb-5"><i class="fa-solid fa-bell"></i></div>
+                        <h4 class="text-base font-bold mb-2">Ezan &amp; Bildirimler</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Her namaz vakti için ezan sesi veya bildirim. Vakit öncesi hatırlatıcı ayarı ile hiçbir namazı kaçırmayın.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-zinc-500/20 flex items-center justify-center text-zinc-400 text-xl mb-5"><i class="fa-solid fa-list-check"></i></div>
+                        <h4 class="text-base font-bold mb-2">Kaza Namazı Takibi</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">5 vakit namaz, Vitir ve oruç kaza borçlarınızı kolayca takip edin. Toplu gün ekleme ve ilerleme takibi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kur'an & Manevi İçerik -->
+            <div class="mb-16">
+                <div class="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 flex items-center gap-3 mb-8">
+                    <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                        <i class="fa-solid fa-book-quran text-blue-400 text-sm"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-400 uppercase tracking-wider text-sm">Kur'an &amp; Manevi İçerik</h3>
+                    <div class="flex-1 h-px bg-blue-500/10"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl mb-5"><i class="fa-solid fa-book-open"></i></div>
+                        <h4 class="text-base font-bold mb-2">Kur'an Okuma</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">114 sureye hızlı erişim. Türkçe, İngilizce, Almanca, Kürtçe dahil çoklu tercüme seçeneği ile okuyun.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl mb-5"><i class="fa-solid fa-headphones"></i></div>
+                        <h4 class="text-base font-bold mb-2">Kur'an Dinleme</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Alafasy, Husary, Minshawi ve Muaiqly — 4 dünyaca ünlü kâri arasından seçin. Ayet ayet takip ederek dinleyin.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 text-xl mb-5"><i class="fa-solid fa-hands-praying"></i></div>
+                        <h4 class="text-base font-bold mb-2">Dua &amp; Zikirler</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Sabah, akşam, namaz sonrası ve günlük 33+ dua. Arapça asıl, okunuş ve Türkçe anlam. Favori sistemi ile kaydet.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-400 text-xl mb-5"><i class="fa-solid fa-rotate"></i></div>
+                        <h4 class="text-base font-bold mb-2">Zikir Matik</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">5 sabit zikir + özel zikir ekleme. Hedef belirle (33, 99, 100, 1000), animasyonlu ilerleme göstergesiyle takip et.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-xl mb-5"><i class="fa-solid fa-scroll"></i></div>
+                        <h4 class="text-base font-bold mb-2">Cevşen-i Kebir</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">100 bölüm, her bölümde 10 ilahi isim. Okunma takibi ile tamamlama ilerlemesini görün.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-violet-500/10 flex items-center justify-center text-violet-400 text-xl mb-5"><i class="fa-solid fa-star-and-crescent"></i></div>
+                        <h4 class="text-base font-bold mb-2">Esmaül Hüsna</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Allah'ın 99 güzel ismi, Arapça yazılış ve Türkçe anlamlarıyla. Canlı API ile her zaman güncel.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- İslami Araçlar -->
+            <div class="mb-16">
+                <div class="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 flex items-center gap-3 mb-8">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center">
+                        <i class="fa-solid fa-calculator text-amber-400 text-sm"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-amber-400 uppercase tracking-wider text-sm">İslami Araçlar</h3>
+                    <div class="flex-1 h-px bg-amber-500/10"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl mb-5"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <h4 class="text-base font-bold mb-2">Zekat &amp; Fitre Hesaplama</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Nakit, altın, dolar, euro üzerinden canlı kurlarla zekat hesabı. Aile sayısına göre fitre miktarı.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl mb-5"><i class="fa-solid fa-moon"></i></div>
+                        <h4 class="text-base font-bold mb-2">Hicri Takvim</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Ramazan, Kadir Gecesi, Miraç, Berat, Mevlid ve tüm dini günler. Aylık hicri takvim görünümü.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-400 text-xl mb-5"><i class="fa-solid fa-circle-question"></i></div>
+                        <h4 class="text-base font-bold mb-2">Soru &amp; Cevap</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">150+ Diyanet İşleri fetvası. Zekat, oruç, namaz, abdest kategorilerinde arama yapın.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center text-yellow-400 text-xl mb-5"><i class="fa-solid fa-trophy"></i></div>
+                        <h4 class="text-base font-bold mb-2">Bilgi Yarışması</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">İslami bilginizi test edin. 30 saniye/soru, hız bonuslu puanlama ve kişisel rekor sistemi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kişisel Deneyim -->
+            <div>
+                <div class="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 flex items-center gap-3 mb-8">
+                    <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                        <i class="fa-solid fa-sparkles text-purple-400 text-sm"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-purple-400 uppercase tracking-wider text-sm">Kişisel Deneyim</h3>
+                    <div class="flex-1 h-px bg-purple-500/10"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center text-yellow-400 text-xl mb-5"><i class="fa-solid fa-dharmachakra"></i></div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <h4 class="text-base font-bold">Manevi Çark</h4>
+                            <span class="text-[9px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-1.5 py-0.5 rounded-full font-bold uppercase">Özel</span>
+                        </div>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Her gün ayet, hadis, dua veya Risale-i Nur'dan ilham. Günlük sürpriz manevi içerikler sizi bekliyor.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-xl mb-5"><i class="fa-solid fa-chart-bar"></i></div>
+                        <h4 class="text-base font-bold mb-2">İstatistikler &amp; Seri</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">7 günlük aktivite ısı haritası, günlük seri takibi, okunan sure sayısı, zikir ve dua istatistikleri.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-400 text-xl mb-5"><i class="fa-solid fa-palette"></i></div>
+                        <h4 class="text-base font-bold mb-2">7 Özel Tema</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Ramazan, Minimal Dark, Ocean, Forest, Sunset ve daha fazlası. 3 ekran modu ile tam kişiselleştirme.</p>
+                    </div>
+                    <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-700 feature-card glass p-6 rounded-2xl border border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl mb-5"><i class="fa-solid fa-language"></i></div>
+                        <h4 class="text-base font-bold mb-2">7 Dil Desteği</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Türkçe, İngilizce, Almanca, Arapça, Kürtçe ve daha fazlası. Yurt dışında yaşayan Müslümanlar için de tam destek.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Paketler -->
+    <section id="paketler" class="py-24 px-6 bg-zinc-950 border-t border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-emerald-500/5 blur-[120px] pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-[800ms] ease-out text-center mb-16">
+                <span class="text-emerald-500 font-semibold tracking-wider uppercase text-sm">PAKETLER</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-3 mb-4 font-serif">Size Uygun Paketi Seçin</h2>
+                <p class="text-zinc-400 max-w-xl mx-auto">Temel özellikler ücretsiz. Daha fazla çark hakkı ve reklamsız deneyim için premium paketleri inceleyin.</p>
+            </div>
+
+            <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-[800ms] ease-out grid md:grid-cols-3 gap-6 items-start">
+
+                <!-- Elif - Ücretsiz -->
+                <div class="tier-card glass p-8 rounded-3xl border border-white/5">
+                    <div class="mb-6">
+                        <div class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-2">Elif</div>
+                        <div class="text-3xl font-bold text-white">Ücretsiz</div>
+                        <div class="text-zinc-500 text-sm mt-1">Sonsuza kadar</div>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> Tüm temel özellikler</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> Namaz vakitleri &amp; kıble</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> Kur'an okuma &amp; dinleme</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> Manevi Çark: <span class="text-white font-semibold ml-1">2 / gün</span></li>
+                        <li class="flex items-center gap-3 text-zinc-400"><i class="fa-solid fa-rectangle-ad text-zinc-600 w-4"></i> Reklamlı</li>
+                    </ul>
+                    <a href="#indir" class="btn-hover block text-center glass text-zinc-300 px-6 py-3 rounded-xl font-semibold hover:bg-zinc-800 border border-white/10 transition-colors">Ücretsiz İndir</a>
+                </div>
+
+                <!-- Lam - Popüler -->
+                <div class="tier-card tier-popular glass p-8 rounded-3xl border border-emerald-500/30 shadow-[0_0_40px_rgba(16,185,129,0.1)] mt-4 md:mt-0">
+                    <div class="mb-6">
+                        <div class="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-2">Lam</div>
+                        <div class="flex items-end gap-1">
+                            <div class="text-3xl font-bold text-white">₺46,99</div>
+                            <div class="text-zinc-500 text-sm mb-1">/ ay</div>
+                        </div>
+                        <div class="text-zinc-500 text-xs mt-1">veya ₺359,99 / yıl <span class="text-emerald-400">(2 ay bedava)</span></div>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> Tüm temel özellikler</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> Namaz vakitleri &amp; kıble</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> Kur'an okuma &amp; dinleme</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> Manevi Çark: <span class="text-emerald-400 font-semibold ml-1">4 / gün</span></li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> <span class="text-emerald-400 font-semibold">Reklamsız</span> deneyim</li>
+                    </ul>
+                    <a href="#indir" class="btn-hover block text-center bg-emerald-500 text-zinc-950 px-6 py-3 rounded-xl font-bold hover:bg-emerald-400 transition-colors">Başla</a>
+                </div>
+
+                <!-- Mim -->
+                <div class="tier-card glass p-8 rounded-3xl border border-white/5">
+                    <div class="mb-6">
+                        <div class="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-2">Mim</div>
+                        <div class="flex items-end gap-1">
+                            <div class="text-3xl font-bold text-white">₺70,99</div>
+                            <div class="text-zinc-500 text-sm mb-1">/ ay</div>
+                        </div>
+                        <div class="text-zinc-500 text-xs mt-1">veya ₺539,99 / yıl <span class="text-zinc-400">(2 ay bedava)</span></div>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> Tüm temel özellikler</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> Namaz vakitleri &amp; kıble</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> Kur'an okuma &amp; dinleme</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> Manevi Çark: <span class="text-white font-semibold ml-1">6 / gün</span></li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> <span class="font-semibold">Reklamsız</span> deneyim</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><i class="fa-solid fa-check text-emerald-500 w-4"></i> Tüm premium özellikler</li>
+                    </ul>
+                    <a href="#indir" class="btn-hover block text-center glass text-zinc-300 px-6 py-3 rounded-xl font-semibold hover:bg-zinc-800 border border-white/10 transition-colors">Başla</a>
                 </div>
             </div>
         </div>
@@ -331,7 +489,7 @@
                     <div class="flex items-center gap-1 text-amber-400 mb-4 text-sm">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-zinc-300 text-sm leading-relaxed mb-5">"Kıble pusulası çok hassas çalışıyor. Yurt dışındayken bile hiç yanılmadı. Tasarımı da diğer uygulamalara göre çok daha modern."</p>
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-5">"Zekat hesaplama özelliği çok işe yaradı. Kıble pusulası da yurt dışında hiç yanılmadı. Tasarımı da diğer uygulamalara göre çok daha modern."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-9 h-9 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-sm border border-purple-500/20">M</div>
                         <div>
@@ -344,7 +502,7 @@
                     <div class="flex items-center gap-1 text-amber-400 mb-4 text-sm">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-zinc-300 text-sm leading-relaxed mb-5">"Ezan bildirimleri mükemmel. İmsakiye özelliği Ramazan boyunca çok işe yaradı. Temiz ve sade tasarım gözü yormadan uzun süre kullanmayı sağlıyor."</p>
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-5">"Cevşen-i Kebir özelliği burada olacak diye düşünmezdim, muazzam. Ezan bildirimleri mükemmel. Temiz arayüz gözü yormadan uzun süre kullanmayı sağlıyor."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-9 h-9 rounded-full bg-rose-500/20 flex items-center justify-center text-rose-400 font-bold text-sm border border-rose-500/20">Z</div>
                         <div>
@@ -357,7 +515,7 @@
                     <div class="flex items-center gap-1 text-amber-400 mb-4 text-sm">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-zinc-300 text-sm leading-relaxed mb-5">"Dua ve zikirler bölümü çok kapsamlı. Her namazın ardından zikir çekiyorum. Günlük alıntılar motivasyonumu artırıyor."</p>
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-5">"Zikir matik ve istatistik özelliği çok motive edici. Günlük seri tutturma alışkanlık kazandırdı. Namaz rehberi de yeni öğrenenler için harika."</p>
                     <div class="flex items-center gap-3">
                         <div class="w-9 h-9 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold text-sm border border-amber-500/20">H</div>
                         <div>
@@ -393,7 +551,7 @@
                     "Kur'an okunduğu zaman ona kulak verip dinleyin ve susun ki size merhamet edilsin."
                 </h2>
                 <p class="text-emerald-400 font-medium text-xs md:text-sm tracking-[0.2em] uppercase mb-4">— A'râf Suresi, 204 —</p>
-                <p class="text-zinc-500 text-sm md:text-base leading-relaxed max-w-sm mx-auto lg:mx-0">Gelişmiş Kur'an-ı Kerim modülü ile surelere kolayca ulaşın.</p>
+                <p class="text-zinc-500 text-sm md:text-base leading-relaxed max-w-sm mx-auto lg:mx-0">4 kâri, çoklu tercüme ve ayet ayet dinleme ile Kur'an'ı her yerden okuyun ve dinleyin.</p>
             </div>
             <div class="relative w-full flex justify-center animate-on-scroll opacity-0 translate-y-12 transition-all duration-[800ms] ease-out">
                 <div class="absolute inset-0 bg-emerald-500/20 blur-[80px] rounded-full"></div>
@@ -414,9 +572,9 @@
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-emerald-500/10 blur-[100px] pointer-events-none"></div>
         <div class="max-w-4xl mx-auto text-center space-y-10 relative z-10">
             <div class="animate-on-scroll opacity-0 translate-y-12 transition-all duration-[800ms] ease-out">
-                <span class="text-emerald-500 font-semibold tracking-wider uppercase text-sm">ÜCRETSİZ İNDİRİN</span>
-                <h2 class="text-4xl md:text-6xl font-bold mt-3">Hemen Başlayın</h2>
-                <p class="text-xl text-zinc-400 max-w-2xl mx-auto mt-6">Tüm dini ihtiyaçlarınızı karşılayacak Vakit360'ı cihazınıza kurun, manevi dünyanızı zenginleştirin.</p>
+                <span class="text-emerald-500 font-semibold tracking-wider uppercase text-sm">ÜCRETSİZ BAŞLAYIN</span>
+                <h2 class="text-4xl md:text-6xl font-bold mt-3">Hemen İndirin</h2>
+                <p class="text-xl text-zinc-400 max-w-2xl mx-auto mt-6">20+ özellik ile Vakit360'ı ücretsiz indirin. İstediğinizde premium pakete geçin.</p>
             </div>
             <div class="flex flex-col sm:flex-row gap-6 justify-center pt-4">
                 <a href="#" class="btn-hover flex items-center justify-center gap-4 bg-white text-black px-10 py-5 rounded-2xl w-full sm:w-auto">
@@ -446,7 +604,7 @@
                     <i class="fa-solid fa-hand-holding-heart"></i>
                 </div>
                 <h2 class="text-3xl md:text-5xl font-serif text-white mb-4">Projeye Destek Olun</h2>
-                <p class="text-zinc-400 text-lg max-w-xl mx-auto">Vakit360 tamamen reklamsız ve ücretsiz bir deneyim sunmayı hedefler. Geliştirme ve sunucu masraflarına katkıda bulunmak isterseniz destek olabilirsiniz.</p>
+                <p class="text-zinc-400 text-lg max-w-xl mx-auto">Vakit360 ücretsiz paketiyle herkesin erişimine açık kalmaya devam ediyor. Geliştirme ve sunucu maliyetlerine katkıda bulunmak isterseniz destek olabilirsiniz.</p>
             </div>
             <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
                 <a href="https://patreon.com/" target="_blank" class="btn-hover inline-flex justify-center items-center gap-3 bg-emerald-500 text-zinc-950 px-8 py-4 rounded-xl font-bold hover:bg-emerald-400 transition-colors">
@@ -473,7 +631,16 @@
                         <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-300 text-sm flex-shrink-0"></i>
                     </button>
                     <div class="faq-answer px-6 max-h-0 overflow-hidden transition-all duration-300">
-                        <p class="text-zinc-400 text-sm leading-relaxed pb-6">Evet, Vakit360 tamamen ücretsiz indirilip kullanılabilir. Temel özellikler ücretsizdir. Premium özellikler için isteğe bağlı üyelik seçenekleri sunulmaktadır.</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed pb-6">Evet, Vakit360 ücretsiz olarak indirilebilir ve temel özelliklerinin tamamı ücretsiz kullanılabilir. Daha fazla Manevi Çark hakkı ve reklamsız deneyim için isteğe bağlı Lam veya Mim paketine geçebilirsiniz.</p>
+                    </div>
+                </div>
+                <div class="glass rounded-2xl border border-white/5 overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-white pr-4">Ücretsiz pakette reklam var mı?</span>
+                        <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-300 text-sm flex-shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-6 max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="text-zinc-400 text-sm leading-relaxed pb-6">Elif (ücretsiz) paketinde bazı ekranlarda reklam gösterilir. Lam veya Mim paketine geçerek tamamen reklamsız bir deneyim yaşayabilirsiniz. Ödüllü video izleyerek de ekstra Manevi Çark hakkı kazanabilirsiniz.</p>
                     </div>
                 </div>
                 <div class="glass rounded-2xl border border-white/5 overflow-hidden">
@@ -482,7 +649,7 @@
                         <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-300 text-sm flex-shrink-0"></i>
                     </button>
                     <div class="faq-answer px-6 max-h-0 overflow-hidden transition-all duration-300">
-                        <p class="text-zinc-400 text-sm leading-relaxed pb-6">Vakit360, Diyanet İşleri Başkanlığı ile uyumlu Aladhan API'sini kullanır. Konumunuza göre hassas hesaplama yapar. Türkiye için Method 13 (Diyanet) varsayılan olarak seçilidir.</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed pb-6">Diyanet İşleri Başkanlığı ile uyumlu Aladhan API'si kullanılmaktadır. Konumunuza göre hassas hesaplama yapılır. Türkiye için Method 13 (Diyanet) varsayılan olarak seçilidir.</p>
                     </div>
                 </div>
                 <div class="glass rounded-2xl border border-white/5 overflow-hidden">
@@ -491,7 +658,7 @@
                         <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-300 text-sm flex-shrink-0"></i>
                     </button>
                     <div class="faq-answer px-6 max-h-0 overflow-hidden transition-all duration-300">
-                        <p class="text-zinc-400 text-sm leading-relaxed pb-6">Kıble pusulası internet bağlantısı olmadan çalışır. Namaz vakitleri ilk açılışta indirilir ve önbelleğe alınır. Uzun süreli çevrimdışı kullanım için internet gerekebilir.</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed pb-6">Kıble pusulası internet olmadan çalışır. Namaz vakitleri ilk açılışta indirilip önbelleğe alınır. Zekat hesabındaki döviz kurları ve Kur'an sesi için internet bağlantısı gerekir.</p>
                     </div>
                 </div>
                 <div class="glass rounded-2xl border border-white/5 overflow-hidden">
@@ -500,7 +667,7 @@
                         <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-300 text-sm flex-shrink-0"></i>
                     </button>
                     <div class="faq-answer px-6 max-h-0 overflow-hidden transition-all duration-300">
-                        <p class="text-zinc-400 text-sm leading-relaxed pb-6">Vakit360 hem iOS (App Store) hem de Android (Google Play) için kullanılabilir. iOS 14+ ve Android 8+ desteklenmektedir.</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed pb-6">iOS (App Store) ve Android (Google Play) için kullanılabilir. iOS 14+ ve Android 8+ desteklenmektedir.</p>
                     </div>
                 </div>
                 <div class="glass rounded-2xl border border-white/5 overflow-hidden">
@@ -509,7 +676,7 @@
                         <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-300 text-sm flex-shrink-0"></i>
                     </button>
                     <div class="faq-answer px-6 max-h-0 overflow-hidden transition-all duration-300">
-                        <p class="text-zinc-400 text-sm leading-relaxed pb-6">Her gün döndürebileceğiniz özel bir özellik. Ayet, hadis, dua ve Risale-i Nur'dan seçilmiş içeriklerle günün her anına anlam katın. Günlük limit üyelik seviyenize göre değişir.</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed pb-6">Her gün döndürebileceğiniz bir özellik; ayet, hadis, dua ve Risale-i Nur'dan seçilmiş içerikler sürpriz olarak gelir. Ücretsiz pakette günde 2, Lam'da 4, Mim'de 6 hak bulunur. Ödüllü video izleyerek ekstra hak kazanabilirsiniz.</p>
                     </div>
                 </div>
             </div>
@@ -554,7 +721,7 @@
                         </div>
                         <span class="font-bold text-white text-lg">Vakit360</span>
                     </div>
-                    <p class="text-zinc-500 text-sm leading-relaxed">İslami yaşamı kolaylaştıran modern uygulama. Namaz, Kur'an, kıble ve daha fazlası.</p>
+                    <p class="text-zinc-500 text-sm leading-relaxed">20+ özellik ile İslami yaşamın tam rehberi. Namaz, Kur'an, kıble, zekat, dua ve daha fazlası.</p>
                     <div class="flex gap-4 text-zinc-500">
                         <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
                         <a href="#" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-twitter text-xl"></i></a>
@@ -565,6 +732,7 @@
                     <div class="space-y-3">
                         <div class="text-zinc-600 font-semibold uppercase tracking-widest text-xs mb-4">Uygulama</div>
                         <a href="#ozellikler" class="block text-zinc-400 hover:text-white transition-colors">Özellikler</a>
+                        <a href="#paketler" class="block text-zinc-400 hover:text-white transition-colors">Paketler</a>
                         <a href="#yorumlar" class="block text-zinc-400 hover:text-white transition-colors">Yorumlar</a>
                         <a href="#indir" class="block text-zinc-400 hover:text-white transition-colors">İndir</a>
                         <a href="#sss" class="block text-zinc-400 hover:text-white transition-colors">SSS</a>
@@ -590,7 +758,6 @@
     </button>
 
     <script>
-        // Scroll animations
         document.addEventListener('DOMContentLoaded', () => {
             const observer = new IntersectionObserver((entries, obs) => {
                 entries.forEach(entry => {
@@ -600,11 +767,10 @@
                         obs.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.12 });
+            }, { threshold: 0.1 });
             document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
         });
 
-        // Mobile menu
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         const bar1 = document.getElementById('bar1');
@@ -630,13 +796,11 @@
             bar3.style.width = '';
         }
 
-        // Scroll to top
         const scrollTopBtn = document.getElementById('scroll-top');
         window.addEventListener('scroll', () => {
             scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
         });
 
-        // FAQ
         function toggleFaq(btn) {
             const answer = btn.nextElementSibling;
             const icon = btn.querySelector('i');
