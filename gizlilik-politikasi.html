@@ -34,7 +34,7 @@
     <!-- İçerik -->
     <main class="max-w-4xl mx-auto px-6 py-16">
         <h1 class="text-4xl md:text-5xl font-serif text-white mb-2">Gizlilik Politikası</h1>
-        <p class="text-emerald-500 text-xs md:text-sm mb-12 uppercase tracking-[0.2em] font-bold">Son Güncelleme: 8 Nisan 2026</p>
+        <p class="text-emerald-500 text-xs md:text-sm mb-12 uppercase tracking-[0.2em] font-bold">Son Güncelleme: 25 Mayıs 2026</p>
 
         <div class="space-y-8 text-zinc-400 leading-relaxed text-lg">
             <p>Vakit360 uygulaması olarak kişisel verilerinizin gizliliğine ve güvenliğine en yüksek önemi veriyoruz. Bu gizlilik politikası, mobil uygulamamızı kullanırken hangi bilgilerin toplandığını, nasıl kullanıldığını ve korunduğunu açıklamaktadır.</p>
@@ -51,16 +51,42 @@
 
             <div>
                 <h2 class="text-2xl font-serif text-white mb-3">3. Veri Güvenliği ve Saklama</h2>
-                <p>Uygulama içerisinde kendi isteğinizle kaydettiğiniz günlük notlar veya kişisel tercihler (Örn: ezan bildirim ayarlarınız, uygulama temanız) sadece kendi telefonunuzun güvenli saklama alanında barındırılır. İsteğe bağlı olarak bu ayarlar bulut hizmetleri aracılığıyla yedeklenebilir ancak standart kullanımda şirketimizin bu verilere erişimi yoktur.</p>
+                <p>Uygulama içerisinde kendi isteğinizle kaydettiğiniz günlük notlar veya kişisel tercihler (Örn: ezan bildirim ayarlarınız, uygulama temanız, seçilen şehir, saat formatı) sadece kendi telefonunuzun güvenli saklama alanında (AsyncStorage) barındırılır. <strong>Vakit360 hiçbir kişisel veriyi uzak sunucularda saklamaz.</strong> Standart kullanımda şirketimizin bu verilere erişimi yoktur.</p>
             </div>
-            
+
             <div>
-                <h2 class="text-2xl font-serif text-white mb-3">4. Politika Değişiklikleri</h2>
+                <h2 class="text-2xl font-serif text-white mb-3">4. Verilerin Saklanma Süresi</h2>
+                <p>Tüm kullanıcı tercihleri ve uygulama verileri yalnızca cihazınızda yerel olarak saklanır. Bu veriler, uygulama cihazınızda yüklü olduğu sürece tutulur. Uygulama kaldırıldığında tüm yerel veriler <strong>otomatik ve kalıcı olarak silinir</strong>.</p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-serif text-white mb-3">5. Verilerin Silinmesi ve Kullanıcı Hakları</h2>
+                <p>Kullanıcılar aşağıdaki yöntemlerle verilerini silebilir:</p>
+                <ul class="list-disc list-inside mt-3 space-y-2 text-zinc-400">
+                    <li><strong>Uygulamayı kaldırma:</strong> Uygulamayı telefonunuzdan kaldırdığınızda tüm yerel veriler (tercihler, istatistikler, bildirim ayarları) otomatik olarak silinir.</li>
+                    <li><strong>Uygulama verilerini temizleme:</strong> Telefonunuzun Ayarlar &gt; Uygulamalar &gt; Vakit360 &gt; Depolama &gt; Verileri Temizle yolunu izleyerek uygulamayı kaldırmadan tüm verileri sıfırlayabilirsiniz.</li>
+                    <li><strong>E-posta ile talep:</strong> Herhangi bir veri silme veya bilgi talebi için <a href="mailto:info@vakit360.com" class="text-emerald-400 hover:text-emerald-300">info@vakit360.com</a> adresine e-posta gönderebilirsiniz. Talebiniz en geç 30 gün içinde yanıtlanacaktır.</li>
+                </ul>
+                <p class="mt-3">Vakit360 sunucu tarafında kişisel veri saklamadığından, uzak sunuculardan silinmesi gereken herhangi bir veri bulunmamaktadır.</p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-serif text-white mb-3">6. Reklam Hizmetleri</h2>
+                <p>Uygulama, reklam gösterimi için Google AdMob hizmetini kullanmaktadır. AdMob, kişiselleştirilmemiş reklamlar sunmak amacıyla cihaz tanımlayıcıları gibi anonim teknik bilgileri toplayabilir. Bu veriler Google'ın kendi gizlilik politikası kapsamında işlenir. Premium abonelik satın alan kullanıcılara reklam gösterilmez.</p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-serif text-white mb-3">7. Bildirim Hizmetleri</h2>
+                <p>Uygulama, namaz vakti bildirimleri için Firebase Cloud Messaging (FCM) hizmetini kullanmaktadır. FCM, bildirimleri iletmek amacıyla anonim bir cihaz token'ı oluşturur. Bu token kişisel bilgi içermez ve yalnızca bildirim gönderimi için kullanılır.</p>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-serif text-white mb-3">8. Politika Değişiklikleri</h2>
                 <p>Vakit360, yürürlükteki yasal mevzuatlara ve uygulama özelliklerindeki değişikliklere bağlı olarak bu gizlilik politikasını zaman zaman güncelleyebilir. Önemli bir değişiklik yapıldığında uygulamanın güncelleme notları yoluyla veya site üzerinden kullanıcılarımıza bilgi verilecektir.</p>
             </div>
 
             <div class="bg-zinc-900/50 border border-emerald-500/20 rounded-2xl p-6 mt-12">
-                <h2 class="text-2xl font-serif text-white mb-3">5. İletişim ve Veri Sorumlusu</h2>
+                <h2 class="text-2xl font-serif text-white mb-3">9. İletişim ve Veri Sorumlusu</h2>
                 <p class="mb-4">Gizlilik politikamızla, haklarınızla veya verilerinizle ilgili her türlü sorunuz için bizimle 7/24 resmi kurumsal e-posta hattımızdan iletişime geçebilirsiniz:</p>
                 <a href="mailto:info@vakit360.com" class="inline-flex items-center gap-2 text-emerald-400 font-bold hover:text-emerald-300 text-xl transition-colors">
                     <i class="fa-solid fa-envelope"></i> info@vakit360.com
